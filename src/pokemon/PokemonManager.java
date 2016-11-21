@@ -1,5 +1,12 @@
 package pokemon;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,20 +21,94 @@ import pokemon.ui.PokemonUI;
 /**
  * The PokemonManager Class
  */
-public class PokemonManager {
+public class PokemonManager implements Serializable {
+	
+	/**	 */
+	private static final long serialVersionUID = -8341409284810316647L;
+
 	/***/
+	private static final String STORAGE_PATH = "pokemonsManager";
+	
 	private static List<Pokemon> pokemons = new ArrayList<Pokemon>();
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		// load and create some Pokemons if no pokemons could be loaded
+		pokemons = loadPokemons();
+		if (pokemons.isEmpty()) {
+			pokemons = createPokemons();
+		}
+
+		// loaded Pokemons
+		System.out.println("Pokemons which are loaded or created");
+		for (Pokemon p : pokemons) {
+			System.out.println(p);
+		}
+		
 		// create a SWT window
 		Display display = new Display();
 		Shell shell = new Shell(display);
-		PokemonUI pui = new PokemonUI(shell, createPokemons());
+		PokemonUI pui = new PokemonUI(shell, pokemons);
 		pui.open();
+		
+		// stored Pokemons
+		System.out.println("Pokemons which are going to be stored");		
+		for (Pokemon p : pokemons){
+			System.out.println(p.toString());
+		}
+		
+		// store
+	    storePokemons(pokemons);
 	}
+	
+	/**
+	 * Stores the list of Pokemons
+	 * 
+	 * @param ps List<Pokemons> with Pokemon instances to be stored
+	 */
+	public static void storePokemons(List<Pokemon> ps) {
+		try {
+			System.out.println("Storing " + ps.size() + " pokemons");
+			// use ObjectOutputStream to write Objects
+			// use FileOutputStream to write to a File 
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(STORAGE_PATH));
+			oos.writeObject(ps);
+			oos.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Loads a list of Pokemons
+	 * 
+	 * @return List<Pokemons>
+	 */
+	@SuppressWarnings("unchecked")
+	public static List<Pokemon> loadPokemons() {
+		List<Pokemon> ps = new ArrayList<Pokemon>();
+		try {
+			// use ObjectInputStream to read Objects
+			// use FileInputStream to read from a File 
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(STORAGE_PATH));
+			ps = (List<Pokemon>) ois.readObject();
+			ois.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Loaded " + ps.size() + " pokemons");
+		return ps;
+	}
+	
+	
+	
 	
 	private static List<Pokemon> createPokemons(){
 	    Pokemon p0 = new Pokemon("Pikachu", Type.Poison);
@@ -43,7 +124,7 @@ public class PokemonManager {
 	    p1.addCompetition(new Competition());
 	    p1.addCompetition(new Competition());
 	    p1.addCompetition(new Competition());
-	     p1.addCompetition(new Competition());
+	    p1.addCompetition(new Competition());
 	    p1.addCompetition(new Competition());
 	    p1.addCompetition(new Competition());
 	    Pokemon p2 = new Pokemon("Raupy", Type.Fire);

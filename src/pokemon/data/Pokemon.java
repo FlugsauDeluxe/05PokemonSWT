@@ -1,5 +1,6 @@
 package pokemon.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,10 +11,12 @@ import pokemon.Swap;
  * @author paul
  *
  */
-public class Pokemon {
+public class Pokemon implements Serializable {
 
-        /**      */
-        private int number;
+     /**	 */
+	private static final long serialVersionUID = 1701299834538543992L;
+	/**      */
+    private int number;
 	/**	 */
 	private String name;
 	/**	 */

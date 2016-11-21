@@ -1,5 +1,6 @@
 package pokemon.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,10 @@ import java.util.List;
  * @author paul
  *
  */
-public class Trainer {
+public class Trainer implements Serializable {
+	
+	/**	 */
+	private static final long serialVersionUID = -2957959275032785669L;
 	/** */
 	private String firstname;
 	/** */

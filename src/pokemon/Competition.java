@@ -9,9 +9,10 @@ import pokemon.data.Pokemon;
  *
  */
 public class Competition extends Swap {
-	/**
-	 * 
-	 */
+	
+	/**	 */
+	private static final long serialVersionUID = 5159289653533647143L;
+	/**	 */
 	private Pokemon winner = null;
 	/**
 	 * 

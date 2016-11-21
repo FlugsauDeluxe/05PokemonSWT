@@ -2,17 +2,17 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/com.ibm.icu_56.1.0.v201601250100.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.core.commands_3.8.0.v20160316-1921.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.core.databinding.beans_1.3.100.v20160509-1025.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.core.databinding.observable_1.6.0.v20160511-1747.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.core.databinding.property_1.6.0.v20160427-0852.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.core.databinding_1.6.0.v20160412-0910.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.equinox.common_3.8.0.v20160509-1230.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.jface.databinding_1.8.0.v20160420-2231.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.jface_3.12.0.v20160518-1929.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.osgi_3.11.1.v20160708-1632.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.swt.gtk.linux.x86_64_3.105.1.v20160907-0248.jar"/>
-	<classpathentry kind="lib" path="/home/ben/UNIH/Informatik/SoftwareEngineering/WS1617/eclipse/pluginsSE/org.eclipse.ui.workbench_3.108.1.v20160819-2118.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/com.ibm.icu_56.1.0.v201601250100.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.core.commands_3.8.0.v20160316-1921.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.core.databinding.beans_1.3.100.v20160509-1025.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.core.databinding.observable_1.6.0.v20160511-1747.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.core.databinding.property_1.6.0.v20160427-0852.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.core.databinding_1.6.0.v20160412-0910.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.equinox.common_3.8.0.v20160509-1230.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.jface.databinding_1.8.0.v20160420-2231.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.jface_3.12.0.v20160518-1929.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.osgi_3.11.1.v20160708-1632.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.swt.win32.win32.x86_64_3.105.1.v20160907-0248.jar"/>
+	<classpathentry kind="lib" path="E:/Software/eclipse/pluginsSE/org.eclipse.ui.workbench_3.108.1.v20160819-2118.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
